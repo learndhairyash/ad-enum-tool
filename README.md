@@ -1,17 +1,43 @@
-# ad-enum-tool
-Active Directory enumeration and recon automation (safe, non-exploitative)
-
 # AD Enumeration Tool (Safe)
 
-This tool demonstrates basic Active Directory enumeration techniques in a safe and non-intrusive manner.
+This project demonstrates basic Active Directory enumeration using Python and LDAP in a controlled lab environment.
+
+The goal is to simulate how attackers perform initial reconnaissance in an AD environment while keeping the implementation safe and non-intrusive.
+
+---
 
 ## Features
-- User and group enumeration (lab environment)
-- LDAP query examples
-- Recon automation scripts
 
-## Purpose
-Demonstrates understanding of AD structures and attacker recon techniques without exploitation.
+- Enumerates domain users via LDAP queries  
+- Enumerates AD groups  
+- Performs targeted LDAP queries (e.g., Domain Admins group)  
+- Simple automation for reconnaissance workflows  
 
-## Disclaimer
-This is a safe, non-weaponized implementation for educational purposes only.
+---
+
+## Technical Details
+
+The tool connects to an LDAP server and performs queries against Active Directory objects.
+
+Key concepts demonstrated:
+
+- LDAP query structure and filters  
+- Active Directory object classes (users, groups)  
+- Attributes such as:
+  - `cn` (Common Name)
+  - `sAMAccountName`
+- Search scopes (subtree enumeration)  
+
+---
+
+## Tech Stack
+
+- Python  
+- ldap3 library  
+- Active Directory (lab setup)
+
+---
+
+## How to Run
+
+1. Install dependencies:
